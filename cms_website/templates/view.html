@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}
+View Record
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="../static/view.css">
+{% endblock style %}
+
+
+
+{% block content %}
+<nav>
+    <div>
+        <a href="/home"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="icon_back" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg> </a>
+    </div>
+    <div class="record">
+        <span> Student&emsp; Record&emsp; Info </span>
+    </div>
+    <div>
+
+    </div>
+</nav>
+
+<section class="wrapper">
+{% for student in student_record["student_info"] %}
+{% if student["sr"]==sr_no %}
+<div>
+<img src="{{student['img']}}" alt="student_picture"  class="student_img" >
+</div>
+<div class="student_records">
+
+<div class="student_record">
+    <span> <strong>Student Name:&emsp;</strong>{{student["name"]}} </span>
+</div>
+<div class="student_record">
+    <span> <strong>Father Name:&emsp;</strong> {{student["father_name"]}} </span>
+</div>
+<div class="student_record">
+    <span> <strong>Roll No:&emsp;</strong>{{student["roll_no"]}}</span>
+</div>
+<div class="student_record">
+    <span> <strong>Class:&emsp;</strong> {{student["class"]}}  </span>
+</div>
+<div class="student_record">
+    <span> <strong>Date of birth:&emsp;</strong> {{student["dob"]}}</span>
+</div>
+<div class="student_record">
+    <span> <strong>Gender:&emsp;</strong> {{student["gender"]}}</span>
+</div>
+<div class="student_record">
+    <span> <strong>Email:&emsp; </strong> {{student["email"]}}</span>
+</div>
+<div class="student_record">
+    <span> <strong>Contact:&emsp;</strong> {{student["contact"]}}</span>
+</div>
+<div class="student_record">
+    <span> <strong>Address:&emsp;</strong> {{student["address"]}}</span>
+</div>
+<div class="student_record">
+    <span> <strong>Mid Term Marks:&emsp;</strong> {{student["mid_marks"]}}</span>
+</div>
+<div class="student_record">
+    <span> <strong>Final Term Marks:&emsp;</strong> {{student["final_marks"]}}</span>
+</div>
+<div class="student_record">
+    <span> <strong>Obtained Marks:&emsp;</strong> {{student["obtain_marks"]}}</span>
+</div>
+<div class="student_record">
+    <span> <strong>Total Marks:&emsp;</strong>{{student["Total marks"]}}</span>
+</div>
+{% endif %}
+{% endfor %}
+
+</div>
+</section>
+{% endblock content %}

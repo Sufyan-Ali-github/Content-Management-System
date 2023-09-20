@@ -1,0 +1,13 @@
+*{
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+body{
+   margin: 0%;
+}
+.flashed_messages{
+    text-align: center;
+    font-style: oblique;
+   font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

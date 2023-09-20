@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+}
+.back_button{
+    text-align: left;
+    font-weight: bolder;
+    font-size: x-large;
+    padding: 15px;
+}
+#back_button{
+    color: rgb(48, 54, 60);
+}
+body{
+   background-image: url("./rg.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    border-radius: 7px;
+    background: linear-gradient(
+        to top,
+        rgb(3, 32, 86),
+        rgb(119, 122, 171)
+    );
+    margin-top: 30px;
+}
+#main{
+    color: aliceblue;
+    font-size: xx-large;
+    font-weight: bolder;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+#fields{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 10px;
+}
+.inputs{
+    padding: 10px 180px 10px 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: large;
+}
+.press{
+    font-size: x-large;
+    font-weight: bold;
+    background-color: rgb(86, 135, 232);  
+    padding: 7px 10px 7px 10px;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+ }
+.button{
+    padding-top: 30px;
+    text-align: center;
+}
+.input_file{
+    text-align: center;
+    font-size: large;
+}

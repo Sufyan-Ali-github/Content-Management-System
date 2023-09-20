@@ -1,0 +1,79 @@
+body{
+    background-image: url("./content.jpeg");
+    margin: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main_content{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    color: azure;
+    font-family: monospace;
+}
+.login_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    margin-top: 70px;
+    
+}
+.login_part{
+    position: relative;
+    padding: 40px;
+    background: transparent;  
+    width: 100%;
+    max-width: 400px; 
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px  black;
+   
+}
+#input_field{
+    padding: 10px 140px 15px 0px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(143, 145, 143);
+    background: transparent;
+    backdrop-filter: blur(20px);
+    color: rgb(0, 0, 0);
+    font-size: large;
+    
+}
+#login_heading{
+    text-align: center; 
+    font-family: monospace;
+   font-weight: bold;
+   font-size: 2.4rem;
+   padding-bottom: 25px;
+}
+#login_buton{
+    background-color: rgb(75, 73, 73);
+    text-align: center;
+    padding: 15px 110px 15px 140px;
+    border-radius: 15px;
+    font-weight: bolder;
+    font-size: large;
+    color: aliceblue;
+}
+.login_div{
+    padding-top: 40px;
+    text-align: center;   
+}
+.register_div{
+    padding-top: 30px;
+    text-align: center;
+}
+.flashed_messages{
+    color: aliceblue;
+    text-align: center;
+    font-style: oblique;
+   font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#register{
+    color: aliceblue;
+}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Teacher CMS{% endblock title %}
+{% block style %}<link rel="stylesheet" href="../static/index.css">{% endblock style %}
+
+
+{% block content %}
+<section class="nav_bar">
+    <div class="nav_items">
+      <div class="main_content">
+        <h1>Teacher CMS</h1>
+      </div>
+     <div class="login_form">
+      <div class="login_part">
+      <div>
+      <h2 id="login_heading">Login</h2>
+      </div>
+      <form action="/login" method="post">
+      <div class="login_username">
+      <p>Username</p>
+      <input type="text" placeholder="Type your username" name="username" id="input_field" required>
+      </div>
+      <div>
+      <p>Password</p>
+      <input type="text" placeholder="Type your password" name="password" id="input_field" required>
+      </div>
+      <div class="login_div">
+      <input type="submit" value="Login" id="login_buton">
+     </div>
+     <div class="register_div">
+      <span>Don't have an Account? <a href="/register" id="register">Register</a> </span>
+     </div>
+    </form>
+     </div>
+    </div>
+    </div>
+</section>
+   
+{% endblock content %}

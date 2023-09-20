@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Record
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="../static/edit.css">
+{% endblock style %}
+
+
+
+{% block content %}
+<nav>
+    <div>
+        <a href="/home"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="icon_back" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg> </a>
+    </div>
+    <div class="record">
+        <span> Edit&emsp; Student&emsp; Record  </span>
+    </div>
+    <div>
+
+    </div>
+</nav>
+
+<section>
+<div class="update_wrapper">
+{% for edit in student_edit["student_info"] %}
+    {% if edit["sr"]==Sr_no %}
+<form action="/edit_record/{{Sr_no}}" method="post">
+    <div>
+        <label for="s_n">Student Name</label>
+        <input type="text" value="{{edit['name']}}" name="name" id="s_n" required >
+    </div>
+    <div>
+        <label for="f_n">Father Name</label>
+        <input type="text" value="{{edit['father_name']}}" id="f_n" name="father_name" required >
+    </div>
+    <div>
+        <label for="rn">Roll No</label>
+        <input type="text" value="{{edit['roll_no']}}" name="roll_no" id="rn" required >
+    </div>
+    <div>
+        <label for="cl">Class</label>
+        <input type="number" value="{{edit['class']}}" id="cl" name="class" required >
+    </div>
+    <div>
+        <label for="dob">Date of Birth</label>
+        <input type="date" value="{{edit['dob']}}" name="dob" id="dob" required >
+    </div>
+    <div>
+        <label for="gdr">Gender</label>
+        <input type="text" value="{{edit['gender']}}" name="gender" id="gdr" required >
+    </div>
+    <div>
+        <label for="eml">Email</label>
+        <input type="email" value="{{edit['email']}}" name="email" id="eml" required >
+    </div>
+    <div>
+        <label for="cnt">Contact No</label>
+        <input type="number" value="{{edit['contact']}}" name="contact" id="cnt" required >
+    </div>
+    <div>
+        <label for="ad">Address</label>
+        <input type="text" value="{{edit['address']}}" name="address" id="ad" required >
+    </div>
+    <div>
+        <label for="mt">Mid_term Marks</label>
+        <input type="text" value="{{edit['mid_marks']}}" name="mid_terms" id="mt" required >
+    </div>
+    <div>
+        <label for="ft">Final_term Marks</label>
+        <input type="text" value="{{edit['final_marks']}}" name="final_marks" id="ft" required >
+    </div>
+    <div>
+        <label for="om">Obtained_Marks</label>
+        <input type="text" value="{{edit['obtain_marks']}}" name="obtain_marks" id="om" required >
+    </div>
+    <div>
+        <label for="fm">Full_Marks</label>
+        <input type="text" value="{{edit['Total marks']}}" name="full_marks" id="fm" required >
+    </div>
+</div>
+    <div id="update_div">
+        <input type="submit" value="update" id="update_button">
+    </div>
+</form>
+{% endif %}
+{% endfor %}
+
+</section>
+
+
+{% endblock content %}

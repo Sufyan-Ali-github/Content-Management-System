@@ -1,0 +1,86 @@
+
+body{
+    background-color: rgb(235, 241, 239);
+    
+}
+.nav_bar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+    background-color: rgb(119, 131, 127);
+}
+#nav_heading{
+    font-size: x-large;
+   text-transform: uppercase;
+
+}
+.students{
+    margin: 30px;
+}
+.student_heading{
+    padding: 5px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 20px 35px rgba(0,0, 0,0.1);
+    font-size: larger;  
+}
+.table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 17px;
+    min-width: 100%;
+    overflow: scroll;
+    border-radius: 5px 5px 0 0;
+}
+table thead tr{
+    color: azure;  
+    background: #5d7c6c;
+     text-align: left;
+     font-weight: bold;
+}
+.table th,.table td{
+    padding: 18px 15px;
+
+}
+.table tbody tr{
+    border-bottom: 2px solid rgb(109, 69, 69);
+    
+}
+#img{
+    padding: 15px 0px 5px 5px;
+    outline: none;
+    border: none;
+    padding-top: 10px;
+    height: 110px;
+    
+}
+#logout_buton {
+    color: #1d1010;
+    width: 80px;
+    height: 33px; 
+}
+.table_actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.table_actions a{
+    padding: 5px 10px;
+    background-color: rgb(88, 189, 189);
+    border-radius: 10px;
+    font-weight: bold;
+    color: #393636;
+}
+.subject_div{
+    text-align: center;
+    
+}
+.new_teacher{
+    text-align: center;
+    font-size: x-large;
+}

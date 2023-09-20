@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}
+ Home
+{% endblock title %}
+
+{% block style %}
+
+<link rel="stylesheet" href="../static/home.css">
+{% endblock style %}
+
+{% block content %}
+<nav class="nav_bar">
+   <div >
+    <img src="{{session['img']}}" alt="teacher-pic"  id="img">
+   </div>
+   <div id="nav_heading" >
+    <h2>Welcome&emsp;Teacher&emsp;{{session['username']}}</h2>
+   </div>
+   <div >
+    <a href="/logout" > <svg xmlns="http://www.w3.org/2000/svg" width="16" height="26" id="logout_buton"   fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+      <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+    </svg> </a>
+    
+   </div>
+</nav>
+<div class="subject_div">
+  <h2>Subject&emsp;{{session["subject"]}}</h2>
+</div>
+<section class="students" >
+    <div class="student_heading">
+      <h3>Student Records</h3>
+    <table class="table">
+        <thead>
+           <tr>
+            <th>Sr.</th>
+            <th>Roll Number</th>
+            <th>Student Name</th>
+            <th>Father Name</th>
+            <th>Class</th>
+            <th class="table_actions">Actions</th>
+           </tr>
+        </thead>
+
+        <tbody>
+
+        {% if "student_info" in student_result %}
+        {% for std in student_result["student_info"] %}
+          <tr>
+            <td>{{std['sr']}} </td>
+            <td>{{std['roll_no']}} </td>
+            <td>{{std['name']}} </td> 
+            <td>{{std['father_name']}} </td> 
+            <td>{{std['class']}}</td> 
+            <td class="table_actions"> <a href="/edit_record/{{std['sr']}}">Edit</a> <a href="/view_record/{{std['sr']}}">View</a> <a href="/delete_record/{{std['sr']}}">Delete</a></td>
+          </tr>
+        {% endfor %}
+        {% else %}
+        <div class="new_teacher">
+          <span> No records for Teacher {{session['username']}}</span>
+        </div>
+        {% endif %}
+
+        </tbody>
+       
+
+      
+        
+      
+
+    </table>
+  </div>
+</section>
+  
+
+
+
+
+
+{% endblock content %}

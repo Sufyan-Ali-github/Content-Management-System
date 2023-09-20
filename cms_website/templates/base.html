@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1yoEZ8UB3qU2M8WMlb6_xLuQ3qr4TStz9750YVzkf9vA3NebH3KrDi8gEL-FIq4zbe5o&usqp=CAU" type="image/x-icon">
+    <title> {% block title %}  {% endblock title %}|CMS  </title>
+    <link rel="stylesheet" href="../static/base.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    {% block style %}
+    {% endblock style %}
+
+</head>
+<body>
+
+
+
+    {% if get_flashed_messages() %}
+      {% for message in get_flashed_messages() %}
+      <div class="flashed_messages">
+          <span>{{message}}</span>
+      </div>
+      {% endfor %}
+    {% endif %}
+  
+  
+    {% block content %}
+    {% endblock content %}
+
+
+</body>
+</html>

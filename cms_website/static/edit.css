@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(175, 224, 217);
+ }
+.record{
+     font-size: x-large;
+     font-weight: bold;
+     margin-bottom: 19px;
+ }
+ nav{
+     display: flex;
+     justify-content: space-between;
+     align-items: baseline;
+     border-bottom: 2px double rgb(0, 0, 0);
+     background-color: darkcyan;
+     
+ }
+ #icon_back{
+   margin: 10px;
+   width: 35px;
+   height: 35px;
+   background-color: rgb(88, 92, 95);
+   padding: 5px 10px;
+   color: aliceblue;
+   border-radius: 5px;
+ }
+.update_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 20px;
+    font-size: larger;
+ }
+form div{
+    padding: 10px;
+ }
+ form label{
+    padding: 0px 10px;
+ }
+ #update_button{
+    padding: 6px;
+    background-color: cadetblue;
+    font-size: large;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    text-align: center;
+ }
+#update_div{
+    text-align: center;
+}
+form input{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+   
+}
